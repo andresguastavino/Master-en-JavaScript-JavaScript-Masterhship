@@ -1,0 +1,15 @@
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.box {
+  width:250px;
+  margin: 20px;
+  text-align: center;
+}
+
+.datos {
+  border: 3px dashed black;
+}
