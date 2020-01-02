@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>jQuery UI</title>
+    <link rel="stylesheet" href="../jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="../jquery-ui/jquery-ui.structure.min.css">
+    <link rel="stylesheet" href="../jquery-ui/jquery-ui.theme.min.css">
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+    </script>
+    <script src="../jquery-ui/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="estilos.css">
+  </head>
+  <body>
+    <h3>Tabs / Pestañas</h3>
+    <div id="tabs">
+      <ul>
+        <li><a href="#tabs-1">Seleccionables</a></li>
+        <li><a href="#tabs-2">Ordenables</a></li>
+        <li><a href="#tabs-3">Tooltips</a></li>
+        <li><a href="#tabs-4">Pop up</a></li>
+        <li><a href="#tabs-5">Calenadrio / Datepicker</a></li>
+        <li><a href="#tabs-6">Efectos</a></li>
+        <li><a href="#tabs-7">Drag&Drop</a></li>
+        <li><a href="#tabs-8">Animaciones</a></li>
+      </ul>
+      <div id="tabs-1">
+        <h3>Seleccionables</h3>
+        <ul class="lista lista-seleccionable">
+          <h2>Lista seleccionable</h2>
+          <li>GTA V</li>
+          <li>Fortnite</li>
+          <li>League of Legends</li>
+          <li>Hollow Knight</li>
+          <li>Crash Bandicoot</li>
+          <li>Super Mario</li>
+        </ul>
+      </div>
+      <div id="tabs-2">
+        <h3>Ordenables</h3>
+        <ul class="lista lista-ordenable">
+          <h2>Lista ordenable</h2>
+          <li>GTA V</li>
+          <li>Fortnite</li>
+          <li>League of Legends</li>
+          <li>Hollow Knight</li>
+          <li>Crash Bandicoot</li>
+          <li>Super Mario</li>
+        </ul>
+      </div>
+      <div id="tabs-3">
+        <h3>Tooltip</h3>
+        <a href="#" id="misDatos" title='Acceder a la seccion de mis datos de esta web'>Mis datos</a>
+        <a href="#" id="misDatos" title='Logueate en esta web'>Identificarse</a>
+        <a href="#" id="misDatos" title='Ver mi lista de amigos'>Amigos</a>
+      </div>
+      <div id="tabs-4">
+        <h3>Pop ups</h3>
+        <button id="lanzarPopup">Lazar PopUp</button>
+        <div id="popup" title="Estas seguro?" style="display: none;">
+          Hola soy un popup :D
+        </div>
+      </div>
+      <div id="tabs-5">
+        <h3>Calendario</h3>
+        <input type="text" id="calendario" style="text-align: center;">
+      </div>
+      <div id="tabs-6">
+        <h3>Efectos</h3>
+        <button id="btn-mostrar">Mostrar</button>
+        <div class="cajas-efectos">
+          <div class="caja-efectos" id="caja-efectos1"></div>
+          <div class="caja-efectos" id="caja-efectos2"></div>
+          <div class="caja-efectos" id="caja-efectos3"></div>
+          <div class="caja-efectos" id="caja-efectos4"></div>
+          <div class="caja-efectos" id="caja-efectos5"></div>
+          <div class="caja-efectos" id="caja-efectos6"></div>
+          <div class="caja-efectos" id="caja-efectos7"></div>
+        </div>
+      </div>
+      <div id="tabs-7">
+        <h3>Drag & Drop</h3>
+        <div class="drag-drop">
+          <div id="movible"></div>
+          <br>
+          <div id="area"></div>
+        </div>
+      </div>
+      <div id="tabs-8">
+        <h3>Animaciones</h3>
+        <div class="elemento" id="resizable">
+          Hola soy un elemento de la web
+        </div>
+        <div class="elemento">
+          Hola soy un elemento de la web
+        </div>
+        <div class="elemento">
+          Hola soy un elemento de la web
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="interfaz.js"></script>
+</html>

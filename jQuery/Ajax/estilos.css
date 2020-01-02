@@ -1,0 +1,12 @@
+body {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.datos {
+  margin: 100px auto;
+  width: 450px;
+  height: 450px;
+  border: 2px solid #000;
+  overflow: scroll;
+}

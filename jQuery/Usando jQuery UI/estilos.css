@@ -1,0 +1,57 @@
+.elemento {
+  width: 300px;
+  height: 200px;
+  border: 4px solid black;
+  background-color: lightblue;
+  margin: 20px;
+  float: left;
+}
+
+.cajas-efectos {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.caja-efectos {
+  width: 100px;
+  height: 100px;
+  border: 4px solid black;
+  background-color: pink;
+  margin: 20px;
+  display: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.lista li {
+  width: 80%;
+  padding: 20px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+ul .ui-selecting {
+  background-color: green;
+}
+
+ul .ui-selected {
+  background-color: blue;
+}
+
+.drag-drop {
+  margin-top: 50px;
+}
+
+#movible {
+  width: 100px;
+  height: 100px;
+  border: 4px solid red;
+}
+
+#area {
+  width: 300px;
+  height: 300px;
+  border: 4px solid green;
+}

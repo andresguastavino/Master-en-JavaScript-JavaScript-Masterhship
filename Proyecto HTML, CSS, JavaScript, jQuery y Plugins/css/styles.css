@@ -1,0 +1,182 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: url('../img/hojas.jpg');
+  background-attachment: fixed;
+}
+
+.container {
+  width: 65%;
+  margin: 4rem auto 0 auto;
+  padding: 2rem;
+  background-color: #FFF;
+  box-shadow: 0rem 0rem 2rem gray;
+}
+
+#logo {
+  font-family: 'Verdana', 'Arial';
+  font-size: 1.6rem;
+  letter-spacing: 0.1rem;
+  background-color: #235E3D;
+  color: #FFF;
+  padding: 0.6rem;
+  width: 50%;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#menu {
+  font-family: 'Helvetica', 'Arial';
+  background-color: #333;
+  width: 100%;
+  text-transform: uppercase;
+  margin: 2rem 0;
+}
+
+#menu ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  text-align: center;
+}
+
+#menu ul li {
+  padding: 1rem;
+  width: 25%;
+}
+
+#menu ul li:hover {
+  background-color: #235E3D;
+  cursor: pointer;
+}
+
+#menu ul li:hover a {
+  color: #CCC;
+}
+
+#menu ul li a {
+  color: #FFF;
+  text-decoration: none;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.articulos {
+  width: 60%;
+  font-family: 'Helvetica', 'Arial';
+}
+
+.articulo {
+  padding: 0.4rem 1rem;
+  margin-bottom: 2rem;
+}
+
+.articulo h2 {
+  font-size: 1.8rem;
+  color: #333;
+}
+
+.articulo .fecha {
+  color: gray;
+  margin-top: 0.1rem;
+}
+
+.articulo p {
+  margin: 0.2rem 0rem;
+  line-height: 1.4rem;
+  text-align: justify;
+}
+
+.mas {
+  padding: 0.6rem;
+  background-color: #235E3D;
+  color: #FFF;
+  text-decoration: none;
+  text-align: center;
+  margin-top: 0.4rem;
+  border: 0;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+aside {
+  width: 30%;
+  font-family: 'Helvetica', 'Arial';
+}
+
+aside h4 {
+  margin-top: 2.4rem;
+  margin-bottom: 1.2rem;
+  text-align: center;
+  line-height: 0.4rem;
+  line-height: 0.5rem;
+  background: url('../img/lines.png') repeat-x;
+}
+
+aside h4 span {
+  background-color: #fff;
+  padding: 0.2rem;
+}
+
+aside img {
+  width: 100%;
+}
+
+aside p {
+  font-size: 1rem;
+  text-align: justify;
+}
+
+aside form .campo {
+  margin: 0.4rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+}
+
+aside form .campo input, aside form .campo label {
+  width: 50%;
+  text-align: center;
+}
+
+aside form .campo input {
+  padding: 0.2rem;
+  border-radius: 0.1rem;
+  border: 0.1rem solid #ccc;
+  box-shadow: 0rem 0rem 0.1rem gray;
+}
+
+aside form .campo.boton {
+  margin-top: 1rem;
+  justify-content: flex-end;
+}
+
+aside form .campo.boton button {
+  border: 0;
+  padding: 0.5rem 0.4rem;
+  cursor: pointer;
+  border: 0.1rem solid #ccc;
+}
+
+footer {
+  font-family: 'Helvetica', 'Arial';
+  color: #fff;
+  background-color: rgba(51, 51, 51, 0.7);
+  margin: 0 auto;
+  width: 65%;
+  padding: 0 1.2rem;
+  text-align: center;
+  margin-top: 2rem;
+  padding: 1rem 0;
+  box-shadow: 0rem 0rem 2rem gray;
+}
