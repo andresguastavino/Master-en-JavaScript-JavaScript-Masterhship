@@ -1,0 +1,16 @@
+.cajas {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.caja {
+  width: 300px;
+  border: 2px dashed black;
+  background-color: #ccc;
+  text-align: center;
+  line-height: 50px;
+  font-size: 19px;
+  font-family: Verdana;
+  margin-top: 15px;
+  margin-right: 15px;
+}
