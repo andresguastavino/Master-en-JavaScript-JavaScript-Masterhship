@@ -1,0 +1,21 @@
+body {
+  background: url('../img/rojo.jpg');
+  background-attachment: fixed;
+}
+
+#logo {
+  background-color: #CA3413;
+}
+
+#menu ul li:hover {
+  background-color: #CA3413;
+}
+
+.mas {
+  background-color: #CA3413;
+}
+
+.ui-state-active {
+  background-color: #F24722;
+  border-color: #CA3413;
+}

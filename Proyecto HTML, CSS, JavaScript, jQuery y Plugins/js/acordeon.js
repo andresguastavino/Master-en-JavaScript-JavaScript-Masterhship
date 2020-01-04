@@ -1,0 +1,2 @@
+// Acordeon
+$('#acordeon').accordion()

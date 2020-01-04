@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Simple Weather App</title>
+    <!-- jQuery y jQueryUI -->
+    <link rel="stylesheet" href="jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="jquery-ui/jquery-ui.structure.min.css">
+    <link rel="stylesheet" href="jquery-ui/jquery-ui.theme.min.css">
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+    </script>
+    <script src="jquery-ui/jquery-ui.min.js"></script>
+
+    <link rel="stylesheet" href="estilos.css">
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Simple Weather App</h1>
+      </header>
+      <main>
+        <form>
+          <div class="label-container">
+            <label for="ubicacion">Ingrese la ubicación donde desee ver el informe del clima</label>
+          </div>
+          <div class="input-container">
+            <input type="text" name="ubicacion" id="ubicacion" placeholder="Ubicacion" value="">
+          </div>
+          <div class="cbox-container">
+            <input type="radio" name="units" id="c" value="metric" checked><label for="c">Celsius</label>
+            <input type="radio" name="units" id="f" value="imperial"><label for="f">Farenheit</label>
+          </div>
+          <div class="button-container">
+            <button type="submit">Ir!</button>
+          </div>
+          <p>ó</p>
+          <div class="button-container">
+            <button type="button" id="btn-ubicacion">Usar mi ubicación</button>
+          </div>
+        </form>
+      </main>
+    </div>
+  </body>
+  <script src="main.js"></script>
+</html>
