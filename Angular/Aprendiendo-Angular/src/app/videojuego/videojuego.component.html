@@ -1,5 +1,5 @@
 <h2>{{ title }}</h2>
-<input type="text" name="title" placeholder="Cambiar titulo" value="">
+<input type="text" name="title" placeholder="Cambiar titulo" value="" (blur)="onBlur()" (keyup.enter)="cambiarTitulo()">
 <button (click)="cambiarTitulo()">Aplicar cambios</button>
 <ul>
   <li *ngFor="let game of list">

@@ -11,7 +11,7 @@
     <button (click)="agregarZaptilla()">Agregar</button>
   </div>
 
-  <li *ngFor="let zapatilla of zapatillas">
+  <li *ngFor="let zapatilla of zapatillas; let indice = index">
     {{zapatilla.nombre}} {{zapatilla.color}} de {{zapatilla.marca}}. Talle {{zapatilla.talle}}
     <ng-template [ngIf]="zapatilla.enOferta" [ngIfElse]="precioNormal">
       <span><s>${{zapatilla.precio}}</s>${{zapatilla.precio * 0.85}}</span>
@@ -19,5 +19,6 @@
     <ng-template #precioNormal>
       <span>${{zapatilla.precio}}</span>
     </ng-template>
+    <button (click)="borrar(indice)">Borrar</button>
   </li>
 </ul>

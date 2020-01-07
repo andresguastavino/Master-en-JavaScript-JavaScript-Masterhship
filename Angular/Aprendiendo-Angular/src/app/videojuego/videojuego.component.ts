@@ -33,4 +33,8 @@ export class VideojuegoComponent implements OnInit, DoCheck, OnDestroy {
     if(newTitle != "")
       this.title = newTitle;
   }
+
+  onBlur() {
+    document.querySelector('input[name="title"]').style.border = '2px solid green';
+  }
 }

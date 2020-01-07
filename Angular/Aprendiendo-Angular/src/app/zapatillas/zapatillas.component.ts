@@ -33,16 +33,20 @@ export class ZapatillasComponent {
       new Zapatilla(this.nombre, this.marca, this.color, this.talle, this.precio, (this.enOferta)?true:false)
     );
 
-    this.limpiarInputs()
+    this.limpiarInputs();
   }
 
   limpiarInputs() {
     (document.querySelectorAll('div#agregar input')).forEach((input) => {
       if(input.type == 'checkbox') {
-        input.checked = false
+        input.checked = false;
       } else {
         input.value = '';
       }
     })
+  }
+
+  borrar(index: number) {
+    this.zapatillas.splice(index, 1);
   }
 }
