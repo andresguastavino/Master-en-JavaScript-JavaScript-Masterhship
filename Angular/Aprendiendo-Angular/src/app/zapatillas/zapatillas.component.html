@@ -1,0 +1,23 @@
+<h2>{{ title }}</h2>
+<ul>
+  <div id="agregar">
+    <p>Aniadir zapatilla</p>
+    <input type="text" name="nombre" placeholder="Nombre" [(ngModel)]="nombre" value="">
+    <input type="text" name="marca" placeholder="Marca" [(ngModel)]="marca" value="">
+    <input type="text" name="color" placeholder="Color" [(ngModel)]="color" value="">
+    <input type="text" name="talle" placeholder="Talle" [(ngModel)]="talle" value="">
+    <input type="number" name="precio" placeholder="Precio" [(ngModel)]="precio" value="">
+    <input type="checkbox" name="enOferta" id="enOferta" [(ngModel)]="enOferta" value=""><label for="enOferta">Poner en oferta</label>
+    <button (click)="agregarZaptilla()">Agregar</button>
+  </div>
+
+  <li *ngFor="let zapatilla of zapatillas">
+    {{zapatilla.nombre}} {{zapatilla.color}} de {{zapatilla.marca}}. Talle {{zapatilla.talle}}
+    <ng-template [ngIf]="zapatilla.enOferta" [ngIfElse]="precioNormal">
+      <span><s>${{zapatilla.precio}}</s>${{zapatilla.precio * 0.85}}</span>
+    </ng-template>
+    <ng-template #precioNormal>
+      <span>${{zapatilla.precio}}</span>
+    </ng-template>
+  </li>
+</ul>

@@ -1,0 +1,12 @@
+<div [ngStyle]="config.css">
+  <h1>
+    {{ config.titulo }}
+  </h1>
+  <p> {{ config.descripcion }} </p>
+
+  <button (click)="videojuegosController()">{{buttonText}}</button>
+
+  <videojuego *ngIf="videojuegosVisible"></videojuego>
+  <zapatillas></zapatillas>
+  <cursos></cursos>
+</div>

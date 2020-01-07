@@ -1,0 +1,8 @@
+<h2>{{ title }}</h2>
+<input type="text" name="title" placeholder="Cambiar titulo" value="">
+<button (click)="cambiarTitulo()">Aplicar cambios</button>
+<ul>
+  <li *ngFor="let game of list">
+    {{ game }}
+  </li>
+</ul>
