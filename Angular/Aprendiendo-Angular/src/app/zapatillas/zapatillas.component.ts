@@ -1,11 +1,15 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Zapatilla } from '../models/Zapatilla';
+import { ZapatillaService } from '../services/zapatilla.service';
 
 @Component({
   selector: 'zapatillas',
-  templateUrl: './zapatillas.component.html'
+  templateUrl: './zapatillas.component.html',
+  providers: [
+    ZapatillaService
+  ]
 })
-export class ZapatillasComponent {
+export class ZapatillasComponent implements OnInit {
   public title: string;
   public zapatillas: Array<Zapatilla>;
 
@@ -18,14 +22,14 @@ export class ZapatillasComponent {
   public enOferta: boolean;
 
 
-  constructor() {
+  constructor(
+    private _zapatillaService: ZapatillaService
+  ) {
     this.title = 'Componente de Zapatillas';
-    this.zapatillas = [
-      new Zapatilla('Pipes', 'Nike', 'Negro', '39', 3000, false),
-      new Zapatilla('Mises', 'Adidas', 'Blanco y Azul', '42', 2600, false),
-      new Zapatilla('Jordans', 'Paladini', 'Dorado', '40', 3200, true),
-      new Zapatilla('Simea', 'Reebook', 'Gris', '38', 3000, true)
-    ];
+  }
+
+  ngOnInit() {
+    this.zapatillas = this._zapatillaService.getZapatillas();
   }
 
   agregarZaptilla() {
@@ -38,10 +42,11 @@ export class ZapatillasComponent {
 
   limpiarInputs() {
     (document.querySelectorAll('div#agregar input')).forEach((input) => {
-      if(input.type == 'checkbox') {
-        input.checked = false;
+      var inputHTML = <HTMLInputElement>input
+      if(inputHTML.type == 'checkbox') {
+        inputHTML.checked = false;
       } else {
-        input.value = '';
+        inputHTML.value = '';
       }
     })
   }

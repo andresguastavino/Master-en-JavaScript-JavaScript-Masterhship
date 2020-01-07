@@ -1,1 +1,5 @@
-<p>cursos works!</p>
+<h2>{{title}}</h2>
+
+<h4>Bienvenido<span *ngIf="nombre"> {{nombre}}</span><span *ngIf="apellido"> {{apellido}}</span>!</h4>
+
+<button (click)="redirigir()">Llevame a zapatillas</button>

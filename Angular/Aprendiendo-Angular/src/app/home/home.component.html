@@ -1,0 +1,8 @@
+<h2>{{title}}</h2>
+<h4>{{fecha | date:'fullDate' | uppercase}} .. or .. {{fecha | date:'dd/MM/yyyy'}}</h4>
+<p>{{'HOLA MUNDO USANDO PIPES' | lowercase}}</p>
+<input type="number" name="val1" placeholder="Value 1" value="" [(ngModel)]="val1">
+<input type="number" name="val2" placeholder="Value 2" value="" [(ngModel)]="val2">
+<div *ngIf="val1 != 0 && val2 != 0">
+  {{ val1 | calculadora: val2 }}
+</div>

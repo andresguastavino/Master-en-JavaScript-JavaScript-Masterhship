@@ -1,1 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
+nav a {
+  color: #fff;
+  text-decoration: none;
+  background-color: #000;
+  padding: 0.2rem 0.6rem;
+}
+
+nav a.active {
+  color: #fff;
+  background-color: purple;
+  font-weight: bold;
+}
+
+span.error {
+  color: darkred;
+  background-color: black;
+  padding: 0.2rem 0.4rem;
+  font-size: 0.8rem;
+  font-weight: bold;
+  font-family: 'Verdana';
+}

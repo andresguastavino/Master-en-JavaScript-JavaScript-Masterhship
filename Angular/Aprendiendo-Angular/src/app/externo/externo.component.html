@@ -1,0 +1,43 @@
+<h2>{{title}}</h2>
+
+<h2>Crear nuevo usuario</h2>
+
+<form #newUser="ngForm" (ngSubmit)="onSubmit(newUser)">
+  <p>
+    <label for="name">Nombre</label>
+    <input type="text" name="name" id="name" placeholder="Nombre" #name="ngModel" [(ngModel)]="new_user.name" required>
+    <span class="error" *ngIf="name.touched && !name.valid">Este campo es obligatorio y solo admite letras</span>
+  </p>
+  <p>
+    <label for="job">Trabajo</label>
+    <input type="text" name="job" id="job" placeholder="Trabajo" #job="ngModel" [(ngModel)]="new_user.job" required>
+    <span class="error" *ngIf="job.touched && !job.valid">Este campo es obligatorio y solo admite letras</span>
+  </p>
+  <p>
+    <input type="submit" [disabled]="!newUser.form.valid" value="Enviar">
+  </p>
+</form>
+
+<div class="new_user" *ngIf="usuario_guardado">
+  <hr>
+  <p>Nombre: {{usuario_guardado.name}}</p>
+  <p>Tu id de usuario: {{usuario_guardado.id}}</p>
+  <p>Trabajo: {{usuario_guardado.job}}</p>
+  <p>Te uniste: {{usuario_guardado.createdAt | date:'dd/MM/yyyy'}}</p>
+</div>
+
+<hr>
+
+<label for="usuario">Ingrese id del usuario que desee buscar(del 1 al 12)</label>
+<input type="number" id="usuario" placeholder="Id del usuario(valor numerico)" [(ngModel)]="userId" (keyup.enter)="cargarUsuario()">
+<button (click)="cargarUsuario()">Cargar informacion del usuario</button>
+
+<div *ngIf="!user">
+  Cargando...
+</div>
+
+<div *ngIf="user">
+  <img src="{{user.avatar}}" alt="">
+  <p>{{user.first_name}} {{user.last_name}}</p>
+  <p>{{user.email}}</p>
+</div>
