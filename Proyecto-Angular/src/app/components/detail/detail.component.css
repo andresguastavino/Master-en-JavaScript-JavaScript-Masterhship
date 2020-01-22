@@ -1,0 +1,22 @@
+.card {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.button-container {
+  margin: 0 auto;
+  margin-top: 2rem;
+  width: 18rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.button-container span {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 2rem;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: red;
+}

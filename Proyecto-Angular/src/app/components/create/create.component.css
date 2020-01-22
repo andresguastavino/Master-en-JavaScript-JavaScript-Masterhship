@@ -1,0 +1,43 @@
+/* Crear nuevo proyecto */
+#title {
+  width: 70%;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 2rem;
+  border-bottom: 0.1rem solid #ccc;
+}
+
+#title h2 {
+  color: #000;
+}
+
+.error {
+  color: darkred;
+  font-weight: bold;
+  text-decoration: underline;
+  margin-bottom: 0.5rem;
+}
+
+textarea {
+  resize: none;
+}
+
+.message {
+  width: 50%;
+  margin: 0 auto;
+  border: 0.1rem solid #000;
+  text-align: center;
+  padding: 0.2rem;
+  border-radius: 5px;
+  font-weight: bold;
+  color: #CCC;
+  margin-bottom: 2rem;
+}
+
+.succes {
+  background-color: darkgreen;
+}
+
+.failed {
+  background-color: darkred;
+}

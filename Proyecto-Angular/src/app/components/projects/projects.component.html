@@ -1,0 +1,22 @@
+<div id="title">
+  <h2>{{title}}</h2>
+</div>
+
+<section class="proyectos">
+  <article *ngFor="let project of projects" class="proyecto">
+    <a [routerLink]="['/proyecto/', project._id]">
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="{{getProjectImage(project.image)}}" *ngIf="project.image">
+        <div class="card-body">
+          <h5 class="card-title">{{project.name}}</h5>
+          <p class="card-text">{{project.description}}</p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">{{project.category}}</li>
+          <li class="list-group-item">{{project.year}}</li>
+          <li class="list-group-item">{{project.languages}}</li>
+        </ul>
+      </div>
+    </a>
+  </article>
+</section>

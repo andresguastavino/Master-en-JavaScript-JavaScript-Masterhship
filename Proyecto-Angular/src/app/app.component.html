@@ -1,0 +1,19 @@
+<header>
+  <nav>
+    <ul>
+      <li><a [routerLink]="['/sobre-mi']" [routerLinkActive]="['active']">Sobre mi</a></li>
+      <li><a [routerLink]="['/proyectos']" [routerLinkActive]="['active']">Proyectos</a></li>
+      <li class="logo"><a href="" [routerLinkActive]="['active']">AG</a></li>
+      <li><a [routerLink]="['/crear-proyecto']" [routerLinkActive]="['active']">Nuevo proyecto</a></li>
+      <li><a [routerLink]="['/contacto']" [routerLinkActive]="['active']">Contacto</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <router-outlet></router-outlet>
+</main>
+
+<footer>
+  Master en JavaScript
+</footer>

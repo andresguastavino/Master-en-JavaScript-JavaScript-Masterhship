@@ -1,0 +1,73 @@
+<div *ngIf="project">
+  <div id="title">
+    <h2>{{title}}</h2>
+  </div>
+
+  <div *ngIf="status == 'success'" class="message succes">
+    El proyecto se ha creado correctamente, puedes verlo <a [routerLink]="['/proyecto/', created_project._id]">aqui</a>.
+  </div>
+
+  <div *ngIf="status == 'failed'" class="message failed">
+    El proyecto no se ha creado correctamente, intenta nuevamente.
+  </div>
+
+  <form #projectForm="ngForm" (ngSubmit)="onSubmit(projectForm)">
+    <div class="row justify-content-center mb-2">
+
+      <div class="col-md-4">
+        <input type="text" class="form-control text-center" name="name" placeholder="Nombre" #name="ngModel" [(ngModel)]="project.name" required>
+        <div class="col text-center error" *ngIf="name.touched && !name.valid">
+          El nombre es obligatorio
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <input type="text" class="form-control text-center" name="category" placeholder="Categoria" #category="ngModel" [(ngModel)]="project.category" required>
+        <div class="col text-center error" *ngIf="category.touched && !category.valid">
+          La categoria es obligatoria
+        </div>
+      </div>
+    </div>
+
+
+    <div class="row justify-content-center mb-2">
+      <div class="col-md-4">
+        <input type="text" class="form-control text-center" name="languages" placeholder="Lenguaje" #languages="ngModel" [(ngModel)]="project.languages" required>
+        <div class="col text-center error" *ngIf="languages.touched && !languages.valid">
+          El lenguaje es obligatorio
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <input type="number" class="form-control text-center" name="year" placeholder="Año" #year="ngModel" [(ngModel)]="project.year" required>
+        <div class="col text-center error" *ngIf="year.touched && !year.valid">
+          El año es obligatorio
+        </div>
+      </div>
+    </div>
+
+    <div class="row justify-content-center mb-2">
+      <div class="col-md-4 text-center">
+        <label for="image" class="form-check-label">Imagen del proyecto</label>
+      </div>
+      <div class="col-md-4">
+        <input type="file" class="form-control text-center" name="image" id="image" placeholder="Imagen" #image="ngModel" [(ngModel)]="project.image" (change)="fileChangeEvent($event)">
+      </div>
+    </div>
+
+    <div class="row justify-content-center mb-2">
+      <div class="col-8">
+        <textarea name="description" class="form-control text-center" rows="2" cols="80" #description="ngModel" [(ngModel)]="project.description" placeholder="Descripcion" required></textarea>
+      </div>
+      <div class="col-md-8 text-center error" *ngIf="description.touched && !description.valid">
+        La descripcion es obligatoria
+      </div>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-8">
+        <button type="submit" class="btn btn-dark" name="button" [disabled]="!projectForm.form.valid">Enviar</button>
+      </div>
+    </div>
+  </form>
+</div>

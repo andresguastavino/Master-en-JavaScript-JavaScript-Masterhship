@@ -1,0 +1,35 @@
+/* Listado proyectos */
+#title {
+  width: 70%;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 2rem;
+  border-bottom: 0.1rem solid #ccc;
+}
+
+#title h2 {
+  color: #000;
+}
+
+section.proyectos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+article.proyecto {
+  width: 33%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.card {
+  text-align: center;
+  height: max-content;
+}
+
+article.proyecto a {
+  text-decoration: none;
+  color: #000;
+}

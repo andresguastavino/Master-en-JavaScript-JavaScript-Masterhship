@@ -1,0 +1,25 @@
+<div *ngIf="project">
+  <div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="{{getProjectImage(project.image)}}" *ngIf="project.image">
+    <div class="card-body">
+      <h5 class="card-title">{{project.name}}</h5>
+      <p class="card-text">{{project.description}}</p>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">{{project.category}}</li>
+      <li class="list-group-item">{{project.year}}</li>
+      <li class="list-group-item">{{project.languages}}</li>
+    </ul>
+  </div>
+
+  <div class="button-container" *ngIf='!confirm'>
+    <a [routerLink]="['/editar-proyecto', project._id]"><button type="button" name="button" class="btn btn-dark">Editar</button></a>
+    <a (click)="setConfirm()"><button type="button" name="button" class="btn btn-dark">Eliminar</button></a>
+  </div>
+
+  <div class="button-container" *ngIf="confirm">
+    <span>! Estas seguro que quieres eliminar este proyecto?</span>
+    <a (click)="unsetConfirm()"><button type="button" name="button" class="btn btn-dark">Cancelar</button></a>
+    <a (click)="deleteProject(project._id)"><button type="button" name="button" class="btn btn-dark">Confirmar</button></a>
+  </div>
+</div>
